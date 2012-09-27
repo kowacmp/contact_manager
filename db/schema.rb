@@ -11,11 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927060445) do
+ActiveRecord::Schema.define(:version => 20120927064518) do
 
   create_table "groups", :force => true do |t|
     t.string   "group_name"
     t.string   "group_kana"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "members", :force => true do |t|
+    t.integer  "team_id"
+    t.string   "name"
+    t.string   "name_kana"
+    t.string   "email"
+    t.integer  "position_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "positions", :force => true do |t|
+    t.string   "position_name"
+    t.integer  "sort"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "teams", :force => true do |t|
+    t.string   "team_name"
+    t.string   "team_kana"
+    t.integer  "group_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

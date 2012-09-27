@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  team_name: MyString
+  team_kana: MyString
+  group_id: 1
+
+two:
+  team_name: MyString
+  team_kana: MyString
+  group_id: 1

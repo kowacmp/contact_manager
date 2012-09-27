@@ -1,4 +1,10 @@
 ContactManager::Application.routes.draw do
+  resources :members
+
+  resources :teams
+
+  resources :positions
+
   resources :groups
 
   # The priority is based upon order of creation:
