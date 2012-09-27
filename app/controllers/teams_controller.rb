@@ -35,6 +35,7 @@ class TeamsController < ApplicationController
   # GET /teams/1/edit
   def edit
     @team = Team.find(params[:id])
+    @groups = Group.find(:all,:order => 'group_kana')
   end
 
   # POST /teams
